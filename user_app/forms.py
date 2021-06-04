@@ -8,11 +8,11 @@ from user_app.models import UserProfile
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
     
-    class Meta:
+    class Meta():
         model = User
         fields = ('username','email','password')
 
 class RegForm(forms.ModelForm):
-    class Meta:
+    class Meta():
         model = UserProfile
         fields = ('portfoliosite','profile_pic')

@@ -7,5 +7,5 @@ class UserProfile(models.Model):
     portfoliosite = models.URLField(blank=True)
     profile_pic = models.ImageField(upload_to = 'profile_pics',blank=True)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.user.username

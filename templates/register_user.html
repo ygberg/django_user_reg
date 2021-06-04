@@ -4,15 +4,19 @@
 {%block content%}
 <h1>Welcome to user register</h1>
     
-<div class="container">
-<form action="" method="POST" enctype="multipart/form-data">
+<div class="jumbotron">
+    
+    {%if registered == True%}
+    <h2>Thank you for registering</h2>
+    {%else%}
+    <h2>pleas register below</h2>
+    <form autocomplete="off" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    <table>
-    {{form.as_table}}
-    {{form2.as_table }}
     
-    </table>
-    
+    {{user_form.as_p}}
+    {{profile_form.as_p}}
     <input type="submit" value="Register"></tr>
+    {%endif%}
+    
   </form></div>
     {%endblock%}
