@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+
+{%block content%}
+<h1>Welcome to user register</h1>
+    
+<div class="container">
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+    {{form.as_table}}
+    {{form2.as_table }}
+    
+    </table>
+    
+    <input type="submit" value="Register"></tr>
+  </form></div>
+    {%endblock%}
