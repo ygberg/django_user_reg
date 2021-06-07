@@ -17,7 +17,7 @@ def index(request):
 @login_required
 def log_out(reuqest):
     logout(reuqest)
-    return HttpResponseRedirect(reverse('index.html'))
+    return HttpResponseRedirect(reverse('index'))
 
 @login_required
 def special_site(request):
