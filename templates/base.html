@@ -12,7 +12,15 @@
             <li><a class="navbar-brand" href="{%url 'index'%}">Home</a></li>
             <li><a class="navbar-link" href="{%url 'admin:index'%}">Admin</a></li>
             <li><a class="navbar-link" href="{%url 'register_user'%}">Register</a></li>
-            
+            {%if user.is_authenticated%}
+            <li><a class="navbar-link" href="{%url 'log_out'%}">Logout</a></li>
+            <li><a class="navbar-link" href="{%url 'special_site'%}">special</a></li>
+
+            {%else%}
+            <li><a class="navbar-link" href="{%url 'user_login'%}">login</a></li>
+            {%endif%}
+
+
     </div>
     </nav>
     <div class="container">

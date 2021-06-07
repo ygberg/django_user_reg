@@ -23,5 +23,10 @@ urlpatterns = [
     url(r'^$',views.index, name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^register_user',views.register_user,name='register_user'),
-    url(r'^user_app',include('user_app.urls')) 
+   # url(r'^user_app',include('user_app.urls')), 
+    url(r'^log_out',views.log_out,name='log_out'),
+    url(r'^special_site',views.special_site,name='special_site'),
+    url(r'^user_login',views.user_login,name='user_login'),
+
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

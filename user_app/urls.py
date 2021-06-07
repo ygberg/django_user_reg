@@ -7,4 +7,7 @@ app_name = 'user_app'
 
 urlpatterns = [
     url(r'register_user/^$',views.register_user, name='register_user'),
+    url(r'^user_login',views.user_login,name='user_login'),
+
+    
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
